@@ -29,6 +29,27 @@ type route struct {
 const SchemaProxyRefPrefix = "#/components/schemas/"
 
 func (module *Module) buildOpenAPIService(ctx pgsgo.Context, in pgs.Service) (*dm_v3.Document, error) {
+	serviceOptions := &apigw_v1.ServiceOptions{}
+	in.Extension(apigw_v1.E_Service, serviceOptions)
+
+	servers := make([]*dm_v3.Server, 0)
+	if serviceOptions != nil {
+		for _, s := range serviceOptions.Service.Servers {
+			servers = append(servers, &dm_v3.Server{
+				URL:         s.Url,
+				Description: s.Description,
+			})
+		}
+	}
+
+	// Default server if none specified
+	if len(servers) == 0 {
+		servers = append(servers, &dm_v3.Server{
+			URL:         "/",
+			Description: "The server for " + nicerFQN(in) + ".",
+		})
+	}
+
 	doc := &dm_v3.Document{
 		Version: "3.1.0",
 		// NOTE: Info is required to be a valid OAS,
@@ -39,12 +60,7 @@ func (module *Module) buildOpenAPIService(ctx pgsgo.Context, in pgs.Service) (*d
 			Version:     "0.0.1",
 			Description: "This is an auto-generated API for " + nicerFQN(in) + ".\n",
 		},
-		Servers: []*dm_v3.Server{
-			{
-				URL:         "/",
-				Description: "The server for " + nicerFQN(in) + ".",
-			},
-		},
+		Servers: servers, // Use dynamically generated servers
 		Paths: &dm_v3.Paths{
 			PathItems: orderedmap.New[string, *dm_v3.PathItem](),
 		},

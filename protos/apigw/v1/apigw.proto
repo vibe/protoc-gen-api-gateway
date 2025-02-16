@@ -10,6 +10,7 @@ option go_package = "github.com/vibe/protoc-gen-api-gateway/apigw/v1";
 // https://github.com/protocolbuffers/protobuf/blob/master/docs/options.md
 extend google.protobuf.ServiceOptions {
   ServiceOptions service = 7650;
+
 }
 
 extend google.protobuf.MethodOptions {
@@ -68,6 +69,12 @@ message ServiceOptions {
 message Service {
   Stability stability = 1;
   string docs_path = 2;
+  repeated Server servers = 3;
+}
+
+message Server {
+  string url = 1;
+  string description = 2;
 }
 
 message TerraformEntity {
