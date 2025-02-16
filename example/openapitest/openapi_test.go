@@ -6,13 +6,13 @@ import (
 	"os"
 	"testing"
 
-	bookstore_v1 "github.com/ductone/protoc-gen-apigw/example/bookstore/v1"
 	"github.com/pb33f/libopenapi"
 	validator "github.com/pb33f/libopenapi-validator"
 	dm_base "github.com/pb33f/libopenapi/datamodel/high/base"
 	dm_v3 "github.com/pb33f/libopenapi/datamodel/high/v3"
 	"github.com/pb33f/libopenapi/orderedmap"
 	"github.com/stretchr/testify/require"
+	bookstore_v1 "github.com/vibe/protoc-gen-api-gateway/example/bookstore/v1"
 )
 
 func TestOpenAPISpec(t *testing.T) {

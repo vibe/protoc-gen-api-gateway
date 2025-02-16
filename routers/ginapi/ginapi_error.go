@@ -5,8 +5,8 @@ import (
 	"io"
 	"net/http"
 
-	apigw_v1 "github.com/ductone/protoc-gen-apigw/apigw/v1"
 	"github.com/grpc-ecosystem/go-grpc-middleware/logging/zap/ctxzap"
+	apigw_v1 "github.com/vibe/protoc-gen-api-gateway/apigw/v1"
 	"go.uber.org/zap"
 
 	"github.com/gin-gonic/gin"

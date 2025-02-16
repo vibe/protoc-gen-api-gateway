@@ -7,7 +7,7 @@
 package v1
 
 import (
-	_ "github.com/ductone/protoc-gen-apigw/apigw/v1"
+	_ "github.com/vibe/protoc-gen-api-gateway/apigw/v1"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	anypb "google.golang.org/protobuf/types/known/anypb"

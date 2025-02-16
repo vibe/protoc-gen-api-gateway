@@ -12,7 +12,7 @@ import (
 	pgsgo "github.com/lyft/protoc-gen-star/lang/go"
 	"google.golang.org/protobuf/testing/protopack"
 
-	apigw_v1 "github.com/ductone/protoc-gen-apigw/apigw/v1"
+	apigw_v1 "github.com/vibe/protoc-gen-api-gateway/apigw/v1"
 )
 
 type methodTemplateContext struct {

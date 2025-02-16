@@ -14,7 +14,7 @@ import (
 	"golang.org/x/text/language"
 	"gopkg.in/yaml.v3"
 
-	apigw_v1 "github.com/ductone/protoc-gen-apigw/apigw/v1"
+	apigw_v1 "github.com/vibe/protoc-gen-api-gateway/apigw/v1"
 )
 
 var (

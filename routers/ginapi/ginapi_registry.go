@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"reflect"
 
-	apigw_v1 "github.com/ductone/protoc-gen-apigw/apigw/v1"
 	"github.com/gin-gonic/gin"
+	apigw_v1 "github.com/vibe/protoc-gen-api-gateway/apigw/v1"
 	"google.golang.org/grpc"
 )
 

@@ -9,10 +9,10 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	bookstore_v1 "github.com/ductone/protoc-gen-apigw/example/bookstore/v1"
-	"github.com/ductone/protoc-gen-apigw/routers/ginapi"
 	"github.com/gin-gonic/gin"
 	"github.com/stretchr/testify/require"
+	bookstore_v1 "github.com/vibe/protoc-gen-api-gateway/example/bookstore/v1"
+	"github.com/vibe/protoc-gen-api-gateway/routers/ginapi"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/metadata"
 	"google.golang.org/protobuf/encoding/protojson"

@@ -4,7 +4,7 @@ package apigw.v1;
 
 import "google/protobuf/descriptor.proto";
 
-option go_package = "github.com/ductone/protoc-gen-apigw/apigw/v1";
+option go_package = "github.com/vibe/protoc-gen-api-gateway/apigw/v1";
 
 // TODO(pquerna): register here
 // https://github.com/protocolbuffers/protobuf/blob/master/docs/options.md

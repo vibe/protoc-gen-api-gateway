@@ -1,4 +1,4 @@
-module github.com/ductone/protoc-gen-apigw
+module github.com/vibe/protoc-gen-api-gateway
 
 go 1.21
 

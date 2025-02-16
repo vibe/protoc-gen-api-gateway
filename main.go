@@ -6,9 +6,9 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/ductone/protoc-gen-apigw/internal/apigw"
 	pgs "github.com/lyft/protoc-gen-star"
 	pgsgo "github.com/lyft/protoc-gen-star/lang/go"
+	"github.com/vibe/protoc-gen-api-gateway/internal/apigw"
 )
 
 func main() {
